@@ -1,0 +1,284 @@
+[
+    {
+        "invoiceId": "INV-A-001",
+        "vendor": "Supplier GmbH",
+        "fields": {
+            "invoiceNumber": "2025-001",
+            "invoiceDate": "2025-01-15",
+            "currency": "EUR",
+            "lineItems": [
+                {
+                    "description": "Widget Type A",
+                    "quantity": 100,
+                    "unitPrice": 5.00,
+                    "totalPrice": 500.00
+                },
+                {
+                    "description": "Widget Type B",
+                    "quantity": 50,
+                    "unitPrice": 8.00,
+                    "totalPrice": 400.00
+                }
+            ]
+        },
+        "rawText": "Invoice 2025-001\nSupplier GmbH\nLeistungsdatum: 15.01.2025\nWidget Type A x100 @ 5.00 = 500.00\nWidget Type B x50 @ 8.00 = 400.00\nTotal: 900.00 EUR"
+    },
+    {
+        "invoiceId": "INV-A-002",
+        "vendor": "Supplier GmbH",
+        "fields": {
+            "invoiceNumber": "2025-002",
+            "invoiceDate": "2025-02-10",
+            "currency": "EUR",
+            "lineItems": [
+                {
+                    "description": "Widget Type A",
+                    "quantity": 200,
+                    "unitPrice": 5.00,
+                    "totalPrice": 1000.00
+                }
+            ]
+        },
+        "rawText": "Invoice 2025-002\nSupplier GmbH\nLeistungsdatum: 10.02.2025\nWidget Type A x200 @ 5.00 = 1000.00\nTotal: 1000.00 EUR"
+    },
+    {
+        "invoiceId": "INV-A-003",
+        "vendor": "TechParts Ltd",
+        "fields": {
+            "invoiceNumber": "TP-2025-100",
+            "invoiceDate": "2025-01-20",
+            "currency": "GBP",
+            "lineItems": [
+                {
+                    "description": "Circuit Board Model X",
+                    "quantity": 25,
+                    "unitPrice": 45.00,
+                    "totalPrice": 1125.00
+                },
+                {
+                    "description": "Connector Pack",
+                    "quantity": 100,
+                    "unitPrice": 2.50,
+                    "totalPrice": 250.00
+                }
+            ]
+        },
+        "rawText": "Invoice TP-2025-100\nTechParts Ltd\nService Date: 20/01/2025\nCircuit Board Model X x25 @ 45.00 = 1125.00\nConnector Pack x100 @ 2.50 = 250.00\nTotal: 1375.00 GBP"
+    },
+    {
+        "invoiceId": "INV-A-004",
+        "vendor": "Supplier GmbH",
+        "fields": {
+            "invoiceNumber": "2025-003",
+            "invoiceDate": "2025-03-05",
+            "currency": "EUR",
+            "lineItems": [
+                {
+                    "description": "Widget Type C",
+                    "quantity": 75,
+                    "unitPrice": 12.00,
+                    "totalPrice": 900.00
+                }
+            ]
+        },
+        "rawText": "Invoice 2025-003\nSupplier GmbH\nLeistungsdatum: 05.03.2025\nWidget Type C x75 @ 12.00 = 900.00\nTotal: 900.00 EUR"
+    },
+    {
+        "invoiceId": "INV-A-005",
+        "vendor": "TechParts Ltd",
+        "fields": {
+            "invoiceNumber": "TP-2025-101",
+            "invoiceDate": "2025-02-28",
+            "currency": "GBP",
+            "lineItems": [
+                {
+                    "description": "Circuit Board Model Y",
+                    "quantity": 10,
+                    "unitPrice": 85.00,
+                    "totalPrice": 850.00
+                }
+            ]
+        },
+        "rawText": "Invoice TP-2025-101\nTechParts Ltd\nService Date: 28/02/2025\nCircuit Board Model Y x10 @ 85.00 = 850.00\nTotal: 850.00 GBP"
+    },
+    {
+        "invoiceId": "INV-A-006",
+        "vendor": "Office Supplies Co",
+        "fields": {
+            "invoiceNumber": "OSC-00456",
+            "invoiceDate": "2025-01-25",
+            "currency": "USD",
+            "lineItems": [
+                {
+                    "description": "Paper Ream A4",
+                    "quantity": 50,
+                    "unitPrice": 4.99,
+                    "totalPrice": 249.50
+                },
+                {
+                    "description": "Ink Cartridge Black",
+                    "quantity": 10,
+                    "unitPrice": 25.00,
+                    "totalPrice": 250.00
+                }
+            ]
+        },
+        "rawText": "Invoice OSC-00456\nOffice Supplies Co\nDate of Service: 01/25/2025\nPaper Ream A4 x50 @ 4.99 = 249.50\nInk Cartridge Black x10 @ 25.00 = 250.00\nTotal: 499.50 USD"
+    },
+    {
+        "invoiceId": "INV-A-007",
+        "vendor": "Supplier GmbH",
+        "fields": {
+            "invoiceNumber": "2025-001",
+            "invoiceDate": "2025-01-15",
+            "currency": "EUR",
+            "lineItems": [
+                {
+                    "description": "Widget Type A",
+                    "quantity": 100,
+                    "unitPrice": 5.00,
+                    "totalPrice": 500.00
+                }
+            ]
+        },
+        "rawText": "Invoice 2025-001\nSupplier GmbH\nLeistungsdatum: 15.01.2025\nWidget Type A x100 @ 5.00 = 500.00\nTotal: 500.00 EUR\n[DUPLICATE SUBMISSION]"
+    },
+    {
+        "invoiceId": "INV-A-008",
+        "vendor": "Global Logistics Inc",
+        "fields": {
+            "invoiceNumber": "GLI-2025-789",
+            "invoiceDate": "2025-03-10",
+            "currency": "USD",
+            "lineItems": [
+                {
+                    "description": "Freight Shipping - Container",
+                    "quantity": 1,
+                    "unitPrice": 2500.00,
+                    "totalPrice": 2500.00
+                },
+                {
+                    "description": "Customs Processing Fee",
+                    "quantity": 1,
+                    "unitPrice": 150.00,
+                    "totalPrice": 150.00
+                }
+            ]
+        },
+        "rawText": "Invoice GLI-2025-789\nGlobal Logistics Inc\nService Period: March 2025\nFreight Shipping - Container x1 @ 2500.00 = 2500.00\nCustoms Processing Fee x1 @ 150.00 = 150.00\nTotal: 2650.00 USD"
+    },
+    {
+        "invoiceId": "INV-A-009",
+        "vendor": "Parts AG",
+        "fields": {
+            "invoiceNumber": "PA-2025-001",
+            "invoiceDate": "2025-01-18",
+            "currency": "EUR",
+            "lineItems": [
+                {
+                    "description": "Precision Gear Set",
+                    "quantity": 20,
+                    "unitPrice": 75.00,
+                    "totalPrice": 1500.00
+                }
+            ]
+        },
+        "rawText": "Rechnung PA-2025-001\nParts AG\nLeistungsdatum: 18.01.2025\nPrecision Gear Set x20 @ 75.00 = 1500.00\nMwSt. inkl.\nTotal: 1500.00 EUR"
+    },
+    {
+        "invoiceId": "INV-A-010",
+        "vendor": "Parts AG",
+        "fields": {
+            "invoiceNumber": "PA-2025-002",
+            "invoiceDate": "2025-02-20",
+            "currency": null,
+            "lineItems": [
+                {
+                    "description": "Motor Assembly",
+                    "quantity": 5,
+                    "unitPrice": 320.00,
+                    "totalPrice": 1600.00
+                }
+            ]
+        },
+        "rawText": "Rechnung PA-2025-002\nParts AG\nLeistungsdatum: 20.02.2025\nMotor Assembly x5 @ 320.00 = 1600.00\nPrices incl. VAT\nTotal: 1600.00 EUR"
+    },
+    {
+        "invoiceId": "INV-A-011",
+        "vendor": "Parts AG",
+        "fields": {
+            "invoiceNumber": "PA-2025-003",
+            "invoiceDate": "2025-03-15",
+            "currency": "EUR",
+            "lineItems": [
+                {
+                    "description": "Bearing Kit",
+                    "quantity": 50,
+                    "unitPrice": 12.50,
+                    "totalPrice": 625.00
+                }
+            ]
+        },
+        "rawText": "Rechnung PA-2025-003\nParts AG\nLeistungsdatum: 15.03.2025\nBearing Kit x50 @ 12.50 = 625.00\nVAT already included\nTotal: 625.00 EUR"
+    },
+    {
+        "invoiceId": "INV-A-012",
+        "vendor": "Freight & Co",
+        "fields": {
+            "invoiceNumber": "FC-2025-001",
+            "invoiceDate": "2025-01-22",
+            "currency": "EUR",
+            "lineItems": [
+                {
+                    "description": "Seefracht Container 40ft",
+                    "quantity": 1,
+                    "unitPrice": 3200.00,
+                    "totalPrice": 3200.00
+                }
+            ]
+        },
+        "rawText": "Rechnung FC-2025-001\nFreight & Co\nLeistungsdatum: 22.01.2025\nSeefracht Container 40ft x1 @ 3200.00 = 3200.00\n2% Skonto if paid within 10 days\nTotal: 3200.00 EUR"
+    },
+    {
+        "invoiceId": "INV-A-013",
+        "vendor": "Freight & Co",
+        "fields": {
+            "invoiceNumber": "FC-2025-002",
+            "invoiceDate": "2025-02-15",
+            "currency": "EUR",
+            "lineItems": [
+                {
+                    "description": "International Shipping Express",
+                    "quantity": 2,
+                    "unitPrice": 850.00,
+                    "totalPrice": 1700.00
+                },
+                {
+                    "description": "Transport Insurance",
+                    "quantity": 1,
+                    "unitPrice": 150.00,
+                    "totalPrice": 150.00
+                }
+            ]
+        },
+        "rawText": "Rechnung FC-2025-002\nFreight & Co\nLeistungsdatum: 15.02.2025\nInternational Shipping Express x2 @ 850.00 = 1700.00\nTransport Insurance x1 @ 150.00 = 150.00\n3% Skonto within 14 days\nTotal: 1850.00 EUR"
+    },
+    {
+        "invoiceId": "INV-A-014",
+        "vendor": "Freight & Co",
+        "fields": {
+            "invoiceNumber": "FC-2025-003",
+            "invoiceDate": "2025-03-20",
+            "currency": "EUR",
+            "lineItems": [
+                {
+                    "description": "Domestic Transport",
+                    "quantity": 5,
+                    "unitPrice": 180.00,
+                    "totalPrice": 900.00
+                }
+            ]
+        },
+        "rawText": "Rechnung FC-2025-003\nFreight & Co\nLeistungsdatum: 20.03.2025\nDomestic Transport x5 @ 180.00 = 900.00\nTotal: 900.00 EUR"
+    }
+]

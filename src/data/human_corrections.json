@@ -1,0 +1,134 @@
+[
+    {
+        "correctionId": "HC-001",
+        "invoiceId": "INV-A-001",
+        "vendor": "Supplier GmbH",
+        "fieldsCorrected": [
+            {
+                "field": "serviceDateLabel",
+                "originalValue": null,
+                "correctedValue": "Leistungsdatum",
+                "reason": "German vendor uses Leistungsdatum for service date"
+            }
+        ],
+        "finalDecision": "approved",
+        "timestamp": "2025-01-16T10:30:00Z"
+    },
+    {
+        "correctionId": "HC-002",
+        "invoiceId": "INV-A-002",
+        "vendor": "Supplier GmbH",
+        "fieldsCorrected": [
+            {
+                "field": "serviceDateLabel",
+                "originalValue": null,
+                "correctedValue": "Leistungsdatum",
+                "reason": "Reinforced vendor pattern"
+            }
+        ],
+        "finalDecision": "approved",
+        "timestamp": "2025-02-11T09:15:00Z"
+    },
+    {
+        "correctionId": "HC-003",
+        "invoiceId": "INV-A-003",
+        "vendor": "TechParts Ltd",
+        "fieldsCorrected": [
+            {
+                "field": "serviceDateLabel",
+                "originalValue": null,
+                "correctedValue": "Service Date",
+                "reason": "UK vendor uses Service Date format"
+            },
+            {
+                "field": "currency",
+                "originalValue": "USD",
+                "correctedValue": "GBP",
+                "reason": "Currency mismatch corrected"
+            }
+        ],
+        "finalDecision": "approved",
+        "timestamp": "2025-01-21T14:00:00Z"
+    },
+    {
+        "correctionId": "HC-004",
+        "invoiceId": "INV-A-004",
+        "vendor": "Supplier GmbH",
+        "fieldsCorrected": [
+            {
+                "field": "quantity",
+                "originalValue": 70,
+                "correctedValue": 75,
+                "reason": "Quantity mismatch - use delivery note quantity"
+            }
+        ],
+        "finalDecision": "approved",
+        "timestamp": "2025-03-06T11:45:00Z"
+    },
+    {
+        "correctionId": "HC-005",
+        "invoiceId": "INV-A-005",
+        "vendor": "TechParts Ltd",
+        "fieldsCorrected": [
+            {
+                "field": "serviceDateLabel",
+                "originalValue": null,
+                "correctedValue": "Service Date",
+                "reason": "Reinforced vendor pattern"
+            }
+        ],
+        "finalDecision": "approved",
+        "timestamp": "2025-03-01T08:30:00Z"
+    },
+    {
+        "correctionId": "HC-006",
+        "invoiceId": "INV-A-006",
+        "vendor": "Office Supplies Co",
+        "fieldsCorrected": [
+            {
+                "field": "serviceDateLabel",
+                "originalValue": null,
+                "correctedValue": "Date of Service",
+                "reason": "US vendor format"
+            },
+            {
+                "field": "vatIncluded",
+                "originalValue": false,
+                "correctedValue": true,
+                "reason": "VAT was included in total"
+            }
+        ],
+        "finalDecision": "approved",
+        "timestamp": "2025-01-26T16:20:00Z"
+    },
+    {
+        "correctionId": "HC-007",
+        "invoiceId": "INV-A-008",
+        "vendor": "Global Logistics Inc",
+        "fieldsCorrected": [
+            {
+                "field": "serviceDateLabel",
+                "originalValue": null,
+                "correctedValue": "Service Period",
+                "reason": "Logistics vendor uses service period"
+            }
+        ],
+        "finalDecision": "approved",
+        "timestamp": "2025-03-11T13:00:00Z"
+    },
+    {
+        "correctionId": "HC-008",
+        "invoiceId": "INV-TEST-REJECTED",
+        "vendor": "Unknown Vendor",
+        "fieldsCorrected": [
+            {
+                "field": "quantity",
+                "originalValue": 100,
+                "correctedValue": 50,
+                "reason": "AI suggested wrong quantity"
+            }
+        ],
+        "finalDecision": "rejected",
+        "timestamp": "2025-02-15T10:00:00Z"
+    }
+]

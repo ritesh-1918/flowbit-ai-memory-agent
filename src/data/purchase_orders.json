@@ -1,0 +1,126 @@
+[
+    {
+        "poNumber": "PO-2025-001",
+        "vendor": "Supplier GmbH",
+        "createdDate": "2025-01-10",
+        "status": "open",
+        "lineItems": [
+            {
+                "sku": "WIDGET-A",
+                "description": "Widget Type A",
+                "quantity": 100,
+                "unitPrice": 5.00
+            },
+            {
+                "sku": "WIDGET-B",
+                "description": "Widget Type B",
+                "quantity": 50,
+                "unitPrice": 8.00
+            }
+        ]
+    },
+    {
+        "poNumber": "PO-2025-002",
+        "vendor": "Supplier GmbH",
+        "createdDate": "2025-02-05",
+        "status": "open",
+        "lineItems": [
+            {
+                "sku": "WIDGET-A",
+                "description": "Widget Type A",
+                "quantity": 200,
+                "unitPrice": 5.00
+            }
+        ]
+    },
+    {
+        "poNumber": "PO-2025-003",
+        "vendor": "Supplier GmbH",
+        "createdDate": "2025-03-01",
+        "status": "open",
+        "lineItems": [
+            {
+                "sku": "WIDGET-C",
+                "description": "Widget Type C",
+                "quantity": 75,
+                "unitPrice": 12.00
+            }
+        ]
+    },
+    {
+        "poNumber": "PO-TP-001",
+        "vendor": "TechParts Ltd",
+        "createdDate": "2025-01-15",
+        "status": "open",
+        "lineItems": [
+            {
+                "sku": "CB-X",
+                "description": "Circuit Board Model X",
+                "quantity": 25,
+                "unitPrice": 45.00
+            },
+            {
+                "sku": "CONN-PACK",
+                "description": "Connector Pack",
+                "quantity": 100,
+                "unitPrice": 2.50
+            }
+        ]
+    },
+    {
+        "poNumber": "PO-TP-002",
+        "vendor": "TechParts Ltd",
+        "createdDate": "2025-02-20",
+        "status": "open",
+        "lineItems": [
+            {
+                "sku": "CB-Y",
+                "description": "Circuit Board Model Y",
+                "quantity": 10,
+                "unitPrice": 85.00
+            }
+        ]
+    },
+    {
+        "poNumber": "PO-PA-001",
+        "vendor": "Parts AG",
+        "createdDate": "2025-01-12",
+        "status": "open",
+        "lineItems": [
+            {
+                "sku": "GEAR-PREC",
+                "description": "Precision Gear Set",
+                "quantity": 20,
+                "unitPrice": 75.00
+            }
+        ]
+    },
+    {
+        "poNumber": "PO-PA-002",
+        "vendor": "Parts AG",
+        "createdDate": "2025-02-15",
+        "status": "open",
+        "lineItems": [
+            {
+                "sku": "MOTOR-ASM",
+                "description": "Motor Assembly",
+                "quantity": 5,
+                "unitPrice": 320.00
+            }
+        ]
+    },
+    {
+        "poNumber": "PO-PA-003",
+        "vendor": "Parts AG",
+        "createdDate": "2025-03-10",
+        "status": "open",
+        "lineItems": [
+            {
+                "sku": "BEARING-KIT",
+                "description": "Bearing Kit",
+                "quantity": 50,
+                "unitPrice": 12.50
+            }
+        ]
+    }
+]

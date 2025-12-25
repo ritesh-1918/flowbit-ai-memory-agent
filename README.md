@@ -212,27 +212,86 @@ Each invoice processing run produces a JSON object:
 
 ## End-to-End Demo
 
-The `src/demoRunner.ts` file demonstrates the complete agent lifecycle:
+The `src/demoRunner.ts` file demonstrates the complete Appendix-aligned agent lifecycle:
 
-### Run 1: Cold Start
-- No prior memory exists
-- Agent escalates to human review
-- Human feedback creates initial memory entries (confidence 0.5)
+### Appendix Step 1: Invoice Ingestion
+- Loads invoices from `src/data/invoices_extracted.json`
+- Parses vendor, invoiceNumber, invoiceDate, currency, lineItems, and rawText
+- Adds `ingest` audit entry for each invoice
 
-### Run 2: Reinforcement
-- Memory exists but confidence (0.5) is below threshold
-- Agent still escalates
-- Human approval reinforces memory (confidence increases to 0.6)
+### Appendix Step 2: Human Correction Replay (Pre-Training)
+- Loads historical corrections from `src/data/human_corrections.json`
+- Replays each correction to pre-populate memory systems
+- Agent starts with learned knowledge instead of cold start
 
-### Run 3: Auto-Pilot
-- Confidence (0.6) meets threshold
-- Agent auto-applies normalizations and corrections
-- No human intervention required
+### Appendix Step 3: Parts AG VAT and Currency Behavior
+- Detects VAT-included pricing from rawText patterns ("MwSt. inkl.", "Prices incl. VAT", "VAT already included")
+- Infers missing currency from rawText (EUR, USD, GBP)
+- Sets `pricesIncludeVAT = true` and proposes tax recomputation
 
-### Run 4: Duplicate Detection
-- Same invoice as Run 3 is submitted again
-- Agent detects duplicate and halts processing
-- No learning occurs (prevents contradictory updates)
+### Appendix Step 4: Supplier GmbH PO Auto-Suggestion
+- Loads purchase orders from `src/data/purchase_orders.json`
+- Matches invoice line items to PO items by description
+- Auto-suggests PO number when exactly one match exists
+
+### Appendix Step 5: Freight & Co Skonto and SKU Mapping
+- Detects Skonto discount terms from rawText (e.g., "2% Skonto if paid within 10 days")
+- Maps freight service descriptions to SKU ("Seefracht", "Shipping", "Transport" → FREIGHT)
+- Stores discount terms in vendor memory
+
+### Duplicate Invoice Handling
+- Checks each invoice against `vendor|invoiceNumber|invoiceDate` key
+- Blocks processing and learning for duplicate submissions
+- Prevents contradictory memory updates
+
+---
+
+## Appendix Alignment and Sample Data Coverage
+
+This implementation is fully aligned with the Flowbit Appendix requirements:
+
+### Data Ingestion
+- Invoice data is loaded from `src/data/invoices_extracted.json` following the Appendix format
+- Historical human corrections are replayed from `src/data/human_corrections.json`
+- Purchase orders are loaded from `src/data/purchase_orders.json`
+
+### Vendor-Specific Behaviors
+
+#### Supplier GmbH
+| Behavior | Implementation |
+|----------|----------------|
+| Service date extraction | Learned from "Leistungsdatum" pattern in rawText |
+| PO auto-suggestion | Single-candidate matching based on line item descriptions |
+| Duplicate detection | Prevents re-learning from repeated invoice submissions |
+
+#### Parts AG
+| Behavior | Implementation |
+|----------|----------------|
+| VAT-included detection | Pattern matching: "MwSt. inkl.", "Prices incl. VAT", "VAT already included" |
+| Currency recovery | Inferred from rawText when `fields.currency` is null |
+
+#### Freight & Co
+| Behavior | Implementation |
+|----------|----------------|
+| Skonto term detection | Extracted from rawText lines containing "Skonto" or "paid within" |
+| Freight SKU mapping | Description keywords ("Seefracht", "Shipping", "Transport") → `sku = FREIGHT` |
+
+### Memory-Driven Design
+All behaviors are learned and applied through the four memory systems:
+
+| Memory Type | Purpose |
+|-------------|---------|
+| Vendor Memory | Stores vendor-specific field mappings and confidence scores |
+| Correction Memory | Tracks recurring correction patterns with approval/rejection counts |
+| Resolution Memory | Records human decisions on AI suggestions for accuracy measurement |
+| Duplicate Memory | Prevents contradictory learning from repeated invoices |
+
+### Design Philosophy
+The goal of this implementation is to demonstrate **reusable learned memory** and **explainable decision-making**, not hard-coded accounting logic. The agent:
+- Learns from historical corrections
+- Builds confidence over time
+- Makes transparent decisions with full audit trails
+- Escalates to humans when uncertain
 
 ---
 
@@ -259,7 +318,12 @@ npm install
 npx ts-node src/demoRunner.ts
 ```
 
-This will reset all memory files and execute the four-run demonstration.
+This will:
+1. Reset all memory files
+2. Load purchase orders
+3. Replay human corrections (pre-training)
+4. Process all invoices sequentially
+5. Output JSON results with audit trails
 
 ### Build (Optional)
 
@@ -318,3 +382,4 @@ GitHub: [https://github.com/ritesh-1918/flowbit-ai-memory-agent](https://github.
 ## License
 
 This project was developed as part of an AI Agent Development Internship assignment for Flowbit.
+
