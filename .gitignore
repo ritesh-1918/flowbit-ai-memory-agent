@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Memory files (generated at runtime)
+vendorMemory.json
+correctionMemory.json
+resolutionMemory.json
+duplicateMemory.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
